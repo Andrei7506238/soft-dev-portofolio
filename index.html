@@ -1,18 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with Meyawo landing page.">
     <meta name="author" content="Devcrud">
-    <title>Popa Andrei-Robert | Software Dev. Personal Projects</title>
+    <title>Popa Andrei-Robert | Jr. Soft. Dev. Personal Projects</title>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Meyawo main styles -->
-	<link rel="stylesheet" href="assets/css/meyawo.css">
+    <link rel="stylesheet" href="assets/css/meyawo.css">
+
+    <style>
+        .logo {
+            width: 2em;
+            height: 2em;
+        }
+
+        .lang {
+            width: 4em;
+            height: 4em;
+            margin-left: 10em;
+        }
+
+        /*Infinite scroll languages*/
+        .scroll {
+            position: relative;
+            width: 95vw;
+            overflow: hidden;
+            z-index: 1;
+            margin: 0;
+            padding: 0;
+        }
+
+        .m-scroll {
+            overflow: hidden;
+            height: 100%;
+            white-space: nowrap;
+            animation: scrollText 10s infinite linear;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            width: fit-content;
+        }
+
+        span {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        @keyframes scrollText {
+            from {
+                transform: translateX(0%);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <!-- navbar -->
+    <nav class="navbar" style="background-color: #695aa6;">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="color: white;">Popa Andrei-Robert</a>
+
+            <div class="d-flex w-auto">
+                <a href="https://www.linkedin.com/in/andrei-robert-popa/" target="_blank">
+                    <img class="logo" src="assets/logos/linkedin.webp" alt="linkedIn">
+                </a>
+                <div class="m-2"></div>
+                <a href="https://github.com/Andrei7506238" target="_blank">
+                    <img class="logo" src="assets/logos/github.png" alt="github">
+                </a>
+            </div>
+        </div>
+    </nav>
+
     <!-- page header -->
     <header id="home" class="header">
         <div class="overlay"></div>
@@ -21,37 +90,129 @@
                 <span class="up">Portofolio</span>
                 <span class="down">Popa Andrei</span>
             </h1>
-            <p class="header-subtitle">Software Dev Projects</p>            
-        </div>              
+            <p class="header-subtitle"> Jr. Software Dev. Projects</p>
+        </div>
     </header><!-- end of page header -->
 
     <!-- about section -->
-    <section class="section pt-0">
+    <section class="section p-5" style="background-color: #695aa6;">
         <!-- container -->
         <div class="container text-center">
             <!-- about wrapper -->
             <div class="about">
                 <div class="about-caption">
-                    <p class="section-subtitle">Who Am I ?</p>
-                    <h2 class="section-title mb-3">About Me</h2>
-                    <p>
-                        I am currently a second year student at the University of Transilvania, Brasov, studying for my Bachelor of Science in Applied Computer Science.
-                        Through my coursework and individual study I have gained knowledge and experience in programming languages such as C++, Java and Python.<br>
-                        I am always eager to learn new technologies and take on new challenges.
-                        I have problem-solving abilities, ability to work in a team, strong attention to detail, strong time management skills.  
-                        I am a creative person and I love to help others.
-                    </p>
-                </div>              
+                    <h2 class="section-title mb-3" style="color: white;">About Me</h2>
+                    <div class="row justify-content-between">
+                        <div class="m-2 col-sm">
+                            <img style="border-radius: 50%;" src="assets/imgs/profile.png" alt="Profile picture"
+                                class="img-responsive">
+                        </div>
+                        <p class="col-sm-9" style="color: white;">
+                            I have a Bachelor of Computer Science from the University of
+                            Transilvania, Brasov. I am a Junior Software developer at <a class="link"
+                                href="https://www.magiclane.com/web/"
+                                style="color:white; text-decoration-line:underline;">Magic Lane</a> where my main
+                            role is developing multiplatorm applications using Flutter.<br><br>
+
+                            Through my coursework, job and individual study I have gained knowledge and
+                            experience in programming languages such as Dart, C++, C#, Java and Python.
+                            I am always eager to learn new technologies and take on new challenges.
+                            I have problem-solving abilities, ability to work in a team, strong attention to detail,
+                            strong time management skills. I am a creative person and I love to help others.
+                        </p>
+                    </div>
+                </div>
             </div><!-- end of about wrapper -->
         </div><!-- end of container -->
     </section> <!-- end of about section -->
 
+    <section class="p-3" style="background-color: #eae9ed;">
+        <div class="row justify-content-center">
+            <h3>Technologies and languages:</h3>
+        </div>
+        <div class="d-flex mt-3 justify-content-center">
+            <div class="row">
+                <div class="scroll section">
+                    <div class="m-scroll">
+                        <img src="assets/logos/cpp.png" alt="Dart" class="lang">
+                        <img src="assets/logos/cs.png" alt="C#" class="lang">
+                        <img src="assets/logos/dart.png" alt="Dart" class="lang">
+                        <img src="assets/logos/java.webp" alt="Java" class="lang">
+                        <img src="assets/logos/python.png" alt="Python" class="lang">
+                        <img src="assets/logos/cpp.png" alt="Dart" class="lang">
+                        <img src="assets/logos/cs.png" alt="C#" class="lang">
+                        <img src="assets/logos/dart.png" alt="Dart" class="lang">
+                        <img src="assets/logos/java.webp" alt="Java" class="lang">
+                        <img src="assets/logos/python.png" alt="Python" class="lang">
+                        <img src="assets/logos/cpp.png" alt="Dart" class="lang">
+                        <img src="assets/logos/cs.png" alt="C#" class="lang">
+                        <img src="assets/logos/dart.png" alt="Dart" class="lang">
+                        <img src="assets/logos/java.webp" alt="Java" class="lang">
+                        <img src="assets/logos/python.png" alt="Python" class="lang">
+                        <img src="assets/logos/cpp.png" alt="Dart" class="lang">
+                        <img src="assets/logos/cs.png" alt="C#" class="lang">
+                        <img src="assets/logos/dart.png" alt="Dart" class="lang">
+                        <img src="assets/logos/java.webp" alt="Java" class="lang">
+                        <img src="assets/logos/python.png" alt="Python" class="lang">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- featured -->
+    <section class="section mt-5 mb-5" id="featured">
+        <div class="container text-center">
+            <p class="section-subtitle">Featured</p>
+            <h6 class="section-title mb-2">Best Apps</h6>
+        </div>
+
+        <div class="container-fluid" style="background-color:#695aa6;">
+            <div class="row">
+                <div class="col-md-6 p-0">
+                    <img src="assets/imgs/fazanFlutter.png" class="blog-card-img" alt="Image showcasing project"
+                        style="width: 100%;">
+                </div>
+
+                <div class="col-md-6 column p-5">
+
+                    <h4 class="blog-card-title"> <a href="https://github.com/Andrei7506238/Fazan" target="_blank"
+                            rel="noopener noreferrer" style="color:white;">Fazan Game Cheat</a></h4>
+                    <p style="color:white;">The app will be a secret partner to help the user master the FAZAN
+                        word game. This tool will skillfully guide through each round, suggesting clever words,
+                        destroying any possibility of opponents continuing.<br><br>
+
+
+                        FAZAN is a popular word and strategy game in Romania, often used as an educational game for
+                        learning
+                        words and developing vocabulary. The game consists of determining strings of words that are
+                        connected by the respective first and last two letters. The aim of the game is to block the
+                        opponent
+                        using words that cannot lead to other words.<br><br>
+
+                        This is a Flutter implementation of the original C++ Fazan Cheat featured below, with a modern
+                        and
+                        user-friendly interface. The app is designed to be easy to use and accessible to all players,
+                        providing a competitive edge in the game. The app is available for download on the Google Play
+                        Store.
+
+                    </p>
+                    <a target="_blank"
+                        href="https://play.google.com/store/apps/details?id=com.andrei7506238.fazan_cheat"
+                        class="blog-card-link">
+                        <img src="assets/logos/googlePlay.png" alt="Get it on google play" style="width: 25%;">
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- blog section -->
     <section class="section" id="blog">
         <!-- container -->
         <div class="container text-center">
-            <p class="section-subtitle">My best projects</p>
+            <p class="section-subtitle">Other projects</p>
             <h6 class="section-title mb-6">Portofolio</h6>
 
             <!-- blog-wrapper -->
@@ -60,13 +221,26 @@
                     <img src="assets/imgs/fazan.png" class="blog-card-img" alt="Image showcasing project">
                 </div>
                 <div class="blog-card-body">
+                    <h4 class="blog-card-title"> <a href="https://github.com/Andrei7506238/Fazan" target="_blank"
+                            rel="noopener noreferrer">Fazan Game Cheat</a></h4>
                     <h6 class="blog-card-caption">C++ | Qt | Graph Theory</h6>
-                    <h4 class="blog-card-title"> <a href="https://github.com/Andrei7506238/Fazan" target="_blank" rel="noopener noreferrer">Fazan Game Cheat</a></h4>
-                    <p>A C++ implementation of a cheat for the classic Romanian word game, Fazan. With this program, players can gain an advantage by having access to a vast array of words at their fingertips. More often than not, the generated word will lock the next player. The program boasts a wide range of options, including toggle for word duplication, the ability to remove words said by opponents, the possibility to play with custom words and more.</p>
-                    <p>Built on a custom directed multigraph data structure and a greedy algorithm, this program guarantees lightning-fast speed even with a massive set of words, including all Scrabble-accepted words in Romanian.</p>
-                    <p>Not only is this software a great tool for gaining a decisive edge in the game, but it can also be used to generate the complete list of words used for blocking. Fun fact: you can link at least 49047 words in a single game of Fazan without closing off options for the next player or repeating a word.</p>
+                    <p>A C++ implementation of a cheat for the classic Romanian word game, Fazan. With this program,
+                        players can gain an advantage by having access to a vast array of words at their fingertips.
+                        More often than not, the generated word will lock the next player. The program boasts a wide
+                        range of options, including toggle for word duplication, the ability to remove words said by
+                        opponents, the possibility to play with custom words and more.</p>
+                    <p>Built on a custom directed multigraph data structure and a greedy algorithm, this program
+                        guarantees lightning-fast speed even with a massive set of words, including all
+                        Scrabble-accepted words in Romanian.</p>
+                    <p>Not only is this software a great tool for gaining a decisive edge in the game, but it can
+                        also
+                        be used to generate the complete list of words used for blocking. Fun fact: you can link at
+                        least 49047 words in a single game of Fazan without closing off options for the next player
+                        or
+                        repeating a word.</p>
                     <p>Note: This is a solo personal project.</p>
-                    <a target="_blank" href="https://github.com/Andrei7506238/Fazan" class="blog-card-link">View on Github <i class="ti-angle-double-right"></i></a>
+                    <a target="_blank" href="https://github.com/Andrei7506238/Fazan" class="blog-card-link">View on
+                        Github <i class="ti-angle-double-right"></i></a>
                 </div>
             </div><!-- end of blog wrapper -->
 
@@ -76,13 +250,20 @@
                     <img src="assets/imgs/subinc.png" class="blog-card-img" alt="Image showcasing project">
                 </div>
                 <div class="blog-card-body">
-                    <h4 class="blog-card-title"> <a href="https://github.com/Andrei7506238/SubInc" target="_blank" rel="noopener noreferrer">SubInc - Automatic Subtitle Downloader and Softcoder</a></h4>
+                    <h4 class="blog-card-title"> <a href="https://github.com/Andrei7506238/SubInc" target="_blank"
+                            rel="noopener noreferrer">SubInc - Automatic Subtitle Downloader and Softcoder</a></h4>
                     <h6 class="blog-card-caption">Python | Web APIs | Windows</h6>
-                    <p>A Python-based script that makes adding subtitles to locally downloaded movies and TV shows a breeze. With its ability to recursively batch process directories, the user can quickly and easily add subtitles to their entire media library.</p>
-                    <p>Built using the powerful MKVToolNix toolset and the opensubtitles API, this script ensures there will always be the perfect subtitles at a fingertip.</p>
-                    <p>Not only is it easy to use, but it can also be seamlessly integrated with other tools. Can be added as a contextual menu option for effortless access.</p>
+                    <p>A Python-based script that makes adding subtitles to locally downloaded movies and TV shows a
+                        breeze. With its ability to recursively batch process directories, the user can quickly and
+                        easily add subtitles to their entire media library.</p>
+                    <p>Built using the powerful MKVToolNix toolset and the opensubtitles API, this script ensures
+                        there
+                        will always be the perfect subtitles at a fingertip.</p>
+                    <p>Not only is it easy to use, but it can also be seamlessly integrated with other tools. Can be
+                        added as a contextual menu option for effortless access.</p>
                     <p>Note: This is a solo personal project.</p>
-                    <a target="_blank" href="https://github.com/Andrei7506238/SubInc" class="blog-card-link">View on Github <i class="ti-angle-double-right"></i></a>
+                    <a target="_blank" href="https://github.com/Andrei7506238/SubInc" class="blog-card-link">View on
+                        Github <i class="ti-angle-double-right"></i></a>
                 </div>
             </div><!-- end of blog wrapper -->
 
@@ -92,13 +273,30 @@
                     <img src="assets/imgs/schoolCMS.png" class="blog-card-img" alt="Image showcasing project">
                 </div>
                 <div class="blog-card-body">
-                    <h4 class="blog-card-title"> <a href="https://github.com/AndreiRobertP/SchoolManagement" target="_blank" rel="noopener noreferrer">School Management System</a></h4>
+                    <h4 class="blog-card-title"> <a href="https://github.com/AndreiRobertP/SchoolManagement"
+                            target="_blank" rel="noopener noreferrer">School Management System</a></h4>
                     <h6 class="blog-card-caption">C# | WPF | EF Core</h6>
-                    <p>The School Management System is a comprehensive desktop application developed using C# and WPF, designed to streamline and simplify the various operations required for efficient school management. This feature-rich system caters to four types of users - admins, teachers, homeroom teachers, and students - offering a wide range of functionalities tailored to their specific roles.</p>
-                    <p>Key features include user management, classroom organization, specialization management, grade tracking, absence management, and more. The user interface is carefully designed to provide an intuitive and compact view, ensuring easy navigation and accessibility to all related features.</p>
-                    <p>With its user-friendly interface and extensive functionality, the School Management System aims to enhance the overall efficiency of school operations, empowering users to manage essential tasks effectively.</p>
+                    <p>The School Management System is a comprehensive desktop application developed using C# and
+                        WPF,
+                        designed to streamline and simplify the various operations required for efficient school
+                        management. This feature-rich system caters to four types of users - admins, teachers,
+                        homeroom
+                        teachers, and students - offering a wide range of functionalities tailored to their specific
+                        roles.</p>
+                    <p>Key features include user management, classroom organization, specialization management,
+                        grade
+                        tracking, absence management, and more. The user interface is carefully designed to provide
+                        an
+                        intuitive and compact view, ensuring easy navigation and accessibility to all related
+                        features.
+                    </p>
+                    <p>With its user-friendly interface and extensive functionality, the School Management System
+                        aims
+                        to enhance the overall efficiency of school operations, empowering users to manage essential
+                        tasks effectively.</p>
                     <p>Note: This is a solo university project.</p>
-                    <a target="_blank" href="https://github.com/AndreiRobertP/SchoolManagement" class="blog-card-link">View on Github <i class="ti-angle-double-right"></i></a>
+                    <a target="_blank" href="https://github.com/AndreiRobertP/SchoolManagement"
+                        class="blog-card-link">View on Github <i class="ti-angle-double-right"></i></a>
                 </div>
             </div><!-- end of blog wrapper -->
 
@@ -108,30 +306,52 @@
                     <img src="assets/imgs/barberShop.png" class="blog-card-img" alt="Image showcasing project">
                 </div>
                 <div class="blog-card-body">
-                    <h4 class="blog-card-title"> <a href="https://github.com/Andrei7506238/BarberScheduleApp" target="_blank" rel="noopener noreferrer">Barbershop Schedule Management System</a></h4>
+                    <h4 class="blog-card-title"> <a href="https://github.com/Andrei7506238/BarberScheduleApp"
+                            target="_blank" rel="noopener noreferrer">Barbershop Schedule Management System</a></h4>
                     <h6 class="blog-card-caption">Java | Swing | SQL</h6>
-                    <p>This Java-based schedule management system is a comprehensive desktop application designed to streamline the scheduling process for hairstyle professionals. The application offers flexibility and ease of use, providing an efficient replacement for traditional paper-based agenda methods.</p>
-                    <p>The system supports multiple staff members and languages. It allows efficient management of customers, staff, appointments, and services. The application also offers customizable work schedules and holiday support. Additionally, the system can generate non-blocking warnings for appointments that may overlap, fall outside of the ordinary schedule, and more, providing an added layer of organization and security.</p>
-                    <p>The user interface is designed to be easy to understand, with a clear and intuitive dashboard that provides useful information about the current status of appointments.</p>
+                    <p>This Java-based schedule management system is a comprehensive desktop application designed to
+                        streamline the scheduling process for hairstyle professionals. The application offers
+                        flexibility and ease of use, providing an efficient replacement for traditional paper-based
+                        agenda methods.</p>
+                    <p>The system supports multiple staff members and languages. It allows efficient management of
+                        customers, staff, appointments, and services. The application also offers customizable work
+                        schedules and holiday support. Additionally, the system can generate non-blocking warnings
+                        for
+                        appointments that may overlap, fall outside of the ordinary schedule, and more, providing an
+                        added layer of organization and security.</p>
+                    <p>The user interface is designed to be easy to understand, with a clear and intuitive dashboard
+                        that provides useful information about the current status of appointments.</p>
                     <p>Note: This is a solo university project.</p>
-                    <a target="_blank" href="https://github.com/Andrei7506238/BarberScheduleApp" class="blog-card-link">View on Github <i class="ti-angle-double-right"></i></a>
+                    <a target="_blank" href="https://github.com/Andrei7506238/BarberScheduleApp"
+                        class="blog-card-link">View on Github <i class="ti-angle-double-right"></i></a>
                 </div>
             </div><!-- end of blog wrapper -->
 
-            
+
             <!-- blog-wrapper -->
             <div class="blog-card" style="display: none;">
                 <div class="blog-card-header">
                     <img src="assets/imgs/moviePlatform.png" class="blog-card-img" alt="Image showcasing project">
                 </div>
                 <div class="blog-card-body">
-                    <h4 class="blog-card-title"> <a href="https://github.com/AndreiRobertP/movie_recommendation_mcia" target="_blank" rel="noopener noreferrer">Movie Recommendation System</a></h4>
+                    <h4 class="blog-card-title"> <a href="https://github.com/AndreiRobertP/movie_recommendation_mcia"
+                            target="_blank" rel="noopener noreferrer">Movie Recommendation System</a></h4>
                     <h6 class="blog-card-caption">C++ | Qt | AI</h6>
-                    <p>A movie catalog and recomandation system built using modern C++. The user interface is intuitive and user-friendly, providing a plethora of features such as movie rating, wishlist, and favorite functionality.</p>
-                    <p>The solution comprises of multiple integrated components, including a logic and database linkage module powered by the sqlite_orm library, a visually appealing UI developed utilizing the Qt framework, a robust testing module, and a Python-based AI recommendation system.</p>
-                    <p>As a team member, I was primarily responsible for the implementation of the UI aspect of the project as well for linking the "frontend" and "backend" projects, as part of our Modern C++ Artificial Intelligence college coursework.</p>
+                    <p>A movie catalog and recomandation system built using modern C++. The user interface is
+                        intuitive
+                        and user-friendly, providing a plethora of features such as movie rating, wishlist, and
+                        favorite
+                        functionality.</p>
+                    <p>The solution comprises of multiple integrated components, including a logic and database
+                        linkage
+                        module powered by the sqlite_orm library, a visually appealing UI developed utilizing the Qt
+                        framework, a robust testing module, and a Python-based AI recommendation system.</p>
+                    <p>As a team member, I was primarily responsible for the implementation of the UI aspect of the
+                        project as well for linking the "frontend" and "backend" projects, as part of our Modern C++
+                        Artificial Intelligence college coursework.</p>
                     <p>Note: This is a team university project.</p>
-                    <a target="_blank" href="https://github.com/AndreiRobertP/movie_recommendation_mcia" class="blog-card-link">View on Github <i class="ti-angle-double-right"></i></a>
+                    <a target="_blank" href="https://github.com/AndreiRobertP/movie_recommendation_mcia"
+                        class="blog-card-link">View on Github <i class="ti-angle-double-right"></i></a>
                 </div>
             </div><!-- end of blog wrapper -->
 
@@ -141,53 +361,60 @@
                     <img src="assets/imgs/fishAquarium.png" class="blog-card-img" alt="Image showcasing project">
                 </div>
                 <div class="blog-card-body">
-                    <h4 class="blog-card-title"> <a href="https://github.com/AndreiRobertP/fish-tank-opengl" target="_blank" rel="noopener noreferrer">OpenGl Fish Aquarium</a></h4>
+                    <h4 class="blog-card-title"> <a href="https://github.com/AndreiRobertP/fish-tank-opengl"
+                            target="_blank" rel="noopener noreferrer">OpenGl Fish Aquarium</a></h4>
                     <h6 class="blog-card-caption">C++ | OpenGl | 3D</h6>
-                    <p>Our OpenGl C++ based game/tech demo showcases our technical and creative proficiency in creating modern 3D graphical systems. This project showcases a fish aquarium rendered in a modern, aesthetically pleasing room.</p>
-                    <p>The game features graphical techniques including 3D camera movement, Phong lighting and shadowing, alpha blending of multiple translucide planes, dynamic billboards (e.g. bubbles that are always facing the camera). The fish movement is generated using parametric 3D equations, providing realistic and dynamic movement.</p>
-                    <p>As the captain of the team, I was primarily responsible for the most challenging aspects of the project, including the management and coordination of the team, as well as the implementation of the most complex features. The project was awarded one of the best demos.</p>
+                    <p>Our OpenGl C++ based game/tech demo showcases our technical and creative proficiency in
+                        creating
+                        modern 3D graphical systems. This project showcases a fish aquarium rendered in a modern,
+                        aesthetically pleasing room.</p>
+                    <p>The game features graphical techniques including 3D camera movement, Phong lighting and
+                        shadowing, alpha blending of multiple translucide planes, dynamic billboards (e.g. bubbles
+                        that
+                        are always facing the camera). The fish movement is generated using parametric 3D equations,
+                        providing realistic and dynamic movement.</p>
+                    <p>As the captain of the team, I was primarily responsible for the most challenging aspects of
+                        the
+                        project, including the management and coordination of the team, as well as the
+                        implementation of
+                        the most complex features. The project was awarded one of the best demos.</p>
                     <p>Note: This is a team university project.</p>
-                    <a target="_blank" href="https://github.com/AndreiRobertP/fish-tank-opengl" class="blog-card-link">View on Github <i class="ti-angle-double-right"></i></a>
+                    <a target="_blank" href="https://github.com/AndreiRobertP/fish-tank-opengl"
+                        class="blog-card-link">View on Github <i class="ti-angle-double-right"></i></a>
                 </div>
             </div><!-- end of blog wrapper -->
-            
-
         </div><!-- end of container -->
     </section><!-- end of blog section -->
 
-    <!-- section -->
-    <section class="section-sm bg-primary" style="display: none;">
-        <!-- container -->
-        <div class="container text-center text-sm-left">
-            <!-- row -->
-            <div class="row align-items-center">
-                <div class="col-sm offset-md-1 mb-4 mb-md-0">
-                    <h6 class="title text-light">Contact me</h6>
-                    <p class="m-0 text-light">Send an email</p>
-                </div>
-                <div class="col-sm offset-sm-2 offset-md-3">
-                    <a class="btn btn-lg my-font btn-light rounded" href="mailto:N9ACst6tBKL88yCy@relay.hidemail.app " target="_top" >Send email</a>
-                </div>
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </section> <!-- end of section -->
+    <section class="bg-primary container-fluid p-3">
+        <div class="row justify-content-between m-3">
+            <h6 class="title text-light">Contact me</h6>
+            <div>
+                <a href="https://www.linkedin.com/in/andrei-robert-popa/" target="_blank">
+                    <img class="logo" src="assets/logos/linkedin.webp" alt="linkedIn">
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- footer -->
     <div class="container">
-        <footer class="footer">       
-            <p class="mb-0">The page is based on &copyDevcrud's Meyavo website template and powered by Github Pages.</p>
+        <footer class="footer">
+            <p class="mb-0">The page is based on &copyDevcrud's Meyavo website template and powered by Github Pages.
+            </p>
         </footer>
     </div> <!-- end of page footer -->
-	
-	<!-- core  -->
+
+    <!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
 
     <!-- bootstrap 3 affix -->
-	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
 
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
 
 </body>
+
 </html>
