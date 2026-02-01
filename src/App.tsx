@@ -1,18 +1,41 @@
+
 import './App.css'
+import { AllProjectsSection } from './components/sections/AllProjectsSection'
+import { FeaturedProjectsSection } from './components/sections/FeaturedProjectsSection'
+import { Introduction } from './components/sections/Introduction'
+import { SkillsSection } from './components/sections/SkillsSection'
+import { person, projects, skills } from './data/portfolio'
+import Layout from './components/layout/Layout'
 
 function App() {
+  const featuredProjects = projects.filter((p) => p.featured)
+  const allProjects = projects.filter((p) => !p.featured)
+
   return (
-    <div className="recon-root">
-      <div className="recon-card">
-        <h1 className="name">Andrei-Robert Popa</h1>
-        <p className="subtitle">Website under reconstruction</p>
-        <hr />
-        <p className="subtitle">I am working on rebuilding my personal website. Stay tuned for updates!</p>
-        <hr />
-        <p className="subtitle">Please check my LinkedIn profile: <a href="https://www.linkedin.com/in/andrei-robert-popa" target="_blank" rel="noopener noreferrer">Andrei-Robert Popa</a></p>
+    <Layout>
+      <div className="page">
+        <Introduction
+          name={person.name}
+          role={person.role}
+          headline={person.headline}
+          photoSrc={person.photoSrc}
+          photoAlt={person.photoAlt}
+          linkedinUrl={person.links.linkedin}
+          speciality={person.speciality}
+          company={person.company}
+          companyUrl={person.companyUrl}
+        />
+
+        <SkillsSection skills={skills} />
+
+        <FeaturedProjectsSection projects={featuredProjects} />
+
+        <AllProjectsSection projects={allProjects} />
       </div>
-    </div>
+    </Layout>
   )
 }
 
+
 export default App
+
