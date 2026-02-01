@@ -13,7 +13,7 @@ export function FeaturedProjectsSection({ projects }: Props) {
       aria-labelledby="featured-title"
     >
       <div className="section-header">
-        <h2 id="featured-title">Featured Projects</h2>
+        <h2 id="featured-title">Featured Personal Projects</h2>
         <p className="section-subtitle">In-depth case studies and highlights.</p>
       </div>
 

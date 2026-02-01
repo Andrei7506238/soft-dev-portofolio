@@ -67,7 +67,7 @@ function SkillGroup({ group }: SkillGroupProps) {
         <h3 id={`group-${group.level}-title`} className="group-title">
           {group.title}
         </h3>
-        <p className="section-subtitle">{group.description}</p>
+        <p className="group-desc">{group.description}</p>
       </header>
 
       <div className="skill-grid" role="list">

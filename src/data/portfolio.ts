@@ -73,12 +73,12 @@ export const skills: Skill[] = [
         name: 'Python',
         level: 'basic',
         logoUrl: `https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg`,
-        hoverDescription: 'Scripting and tooling with Python. I also used it at university for various AI/ML projects.',
+        hoverDescription: 'Advanced scripting and tooling with Python. I also used it at university for various AI/ML projects.',
     },
     {
         name: 'Bash',
         level: 'basic',
-        logoUrl: `https://upload.wikimedia.org/wikipedia/commons/3/3a/Bash_Logo_Colored.svg`,
+        logoUrl: `https://upload.wikimedia.org/wikipedia/commons/4/4b/Bash_Logo_Colored.svg`,
         hoverDescription: 'Scripting and basic tooling with Bash. I used it mainly for automating development tasks that involve simple multiple command-line tools.',
     },
     {
@@ -98,6 +98,18 @@ export const skills: Skill[] = [
         level: 'basic',
         logoUrl: `https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png`,
         hoverDescription: 'I have experience with SQL databases from multiple university projects.',
+    },
+    {
+        name: 'Photoshop',
+        level: 'basic',
+        logoUrl: `https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg`,
+        hoverDescription: 'I used Photoshop extensively in high school for commissions, creating digital and print designs such as posters and flyers.',
+    },
+    {
+        name: 'Illustrator',
+        level: 'basic',
+        logoUrl: `https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg`,
+        hoverDescription: 'I used Illustrator extensively in high school for commissions, creating digital and print designs such as posters and flyers.',
     },
     {
         name: 'Software Architecture',
@@ -138,53 +150,33 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
     {
-        name: 'FitTrack Mobile',
+        name: 'Plugin Restaurant Ordering System',
         description:
-            'A cross-platform fitness tracker with offline-first sync, weekly insights, and smart coaching.',
-        tags: ['React Native', 'TypeScript', 'Firebase'],
-        image: `${assetBase}images/project-1.jpg`,
+            `
+This CS Bachelor’s thesis project features a dynamic restaurant management solution built on ASP.NET Core and Flutter. The backend follows Clean Architecture principles, utilizing a modular, plugin-based system that allows for runtime extensions and unmatched scalability. This architecture enables restaurant owners to integrate custom business logic seamlessly without altering the core infrastructure, ensuring the system evolves alongside their needs.
+
+On the client side, the Flutter application provides a responsive, cross-platform experience optimized with client-side caching for menus and images to minimize server overhead. A key technical highlight is the use of SQL temporal tables, which allows the system to manage historical menu versions and process concurrent orders from different timeframes without data duplication. This is paired with an intuitive statistics dashboard to help managers drive operational efficiency through data-driven insights.
+            `,
+        tags: ['ASP.NET Core', 'Flutter', 'Clean Architecture'],
+        image: `${assetBase}images/showcase/plugin-restaurant-ordering-system.png`,
         links: [
-            { label: 'Case Study', href: '#' },
-            { label: 'GitHub', href: '#' },
+            { label: 'See Case Study', href: '#' },
         ],
         featured: true,
     },
     {
-        name: 'CityTransit',
+        name: 'Fazan Game Cheat',
         description:
-            'Public transport companion with real-time arrivals, saved routes, and accessibility modes.',
-        tags: ['Kotlin', 'Android', 'Maps'],
-        image: `${assetBase}images/project-2.jpg`,
-        links: [{ label: 'Case Study', href: '#' }],
+        `
+This Flutter application modernizes a legacy C++ engine by reimagining the Romanian dictionary as a directed multigraph. In this model, nodes represent two-letter prefixes and suffixes, while edges represent the words connecting them. By implementing the game logic through graph traversal, the app identifies "dead-end" nodes—vertexes with an out-degree of zero—allowing users to strategically select words that leave opponents with no valid moves.
+
+Beyond the algorithmic core, the project focuses on high-performance string processing and efficient memory management within the mobile environment. The transition from a C++ backend to a cross-platform Flutter UI ensures that complex graph lookups happen in real-time, providing a seamless experience for users. Currently available on the Google Play Store, the app demonstrates the practical application of discrete mathematics in solving competitive linguistic challenges.
+        `,
+        tags: ['Flutter', 'Dart', 'C++'],
+        image: `${assetBase}images/showcase/fazan-cheat.png`,
+        links: [
+            { label: 'Check on Google Play', href: 'https://play.google.com/store/apps/details?id=com.andreirobert.fazancheat' },
+        ],
         featured: true,
-    },
-    {
-        name: 'PocketFinance',
-        description: 'Personal finance app with budgeting, subscriptions, and smart alerts.',
-        tags: ['Swift', 'iOS', 'SwiftUI'],
-        image: `${assetBase}images/project-3.jpg`,
-        links: [{ label: 'Case Study', href: '#' }],
-        featured: true,
-    },
-    {
-        name: 'RecipeVault',
-        description: 'Recipe manager with meal planning and grocery lists.',
-        tags: ['React Native', 'SQLite'],
-        image: `${assetBase}images/project-4.jpg`,
-        links: [{ label: 'GitHub', href: '#' }],
-    },
-    {
-        name: 'HabitLoop',
-        description: 'Minimal habit tracker with streaks and calendar view.',
-        tags: ['SwiftUI'],
-        image: `${assetBase}images/project-5.jpg`,
-        links: [{ label: 'GitHub', href: '#' }],
-    },
-    {
-        name: 'TripLens',
-        description: 'Trip organizer with shared itineraries and offline maps.',
-        tags: ['Kotlin', 'Compose'],
-        image: `${assetBase}images/project-6.jpg`,
-        links: [{ label: 'GitHub', href: '#' }],
-    },
+    }
 ]
