@@ -32,7 +32,7 @@ export const todos: Todo[] = [
     },
     {
         title: 'Learn more, create and experiment with a technology or framework',
-        description: 'May it be React Native, Kotlin or Swift, I want to expand my skill set by learning a new technology and creating a project with it.',
+        description: 'May it be React Native, Kotlin or Swift, I want to expand my skills by going in depth with a technology and creating a project with it.',
         status: 'todo',
         eta: 'Everytime',
     },

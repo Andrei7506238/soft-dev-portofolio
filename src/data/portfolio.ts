@@ -10,9 +10,9 @@ export const person = {
     company: 'Magic Lane',
     companyUrl: 'https://magiclane.com/',
     headline: `
-I am a Mobile Developer focused on building high-performance, well-structured Flutter applications. My work centers on software architecture, Dart FFI, and C++ bindings—creating stable foundations.\n
-I enjoy breaking down complex systems into modular, testable components, and I see architecture as the key to long-term maintainability. While my strength is in core logic, my background with tools like Photoshop and Illustrator helps me approach UI with a strong sense of structure and clarity.\n
-For me, great mobile apps are built from the inside out: solid architecture first, with the user experience as its natural result.
+I am a Mobile Developer focused on building high-performance, well-structured Flutter applications. My work centers on software architecture, Dart FFI, and C++ bindings, creating stable foundations.\n
+I enjoy breaking down complex systems into modular, testable components, and I see architecture as the key to long-term maintainability. While my strength is in core logic, I approach UI with a strong sense of structure and clarity.\n
+For me, great mobile apps are built with both solid architecture and user experience in mind, as two complementary aspects.
   `,
     photoSrc: `https://media.licdn.com/dms/image/v2/D4D03AQETN0kD6jT2bg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1695401890460?e=1771459200&v=beta&t=YuPZNxiAxalSvFnwaeIbE_PQlCvzd9TonluX36yG12o`,
     photoAlt: 'My profile photo',

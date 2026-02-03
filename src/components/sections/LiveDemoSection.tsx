@@ -17,7 +17,7 @@ export function LiveDemoSection({ title, description, demoUrl, tags }: Props) {
                     <div className="experimental-banner-content">
                         <strong className="experimental-banner-title">Experimental • Under construction</strong>
                         <p className="experimental-banner-text">
-                            Not production-ready yet — the UI is very primitive and some features may be incomplete or unstable.
+                            Not production-ready yet. The UI and some features are still work in progress.
                         </p>
                     </div>
                 </div>

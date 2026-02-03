@@ -4,6 +4,7 @@ import { AllProjectsSection } from './components/sections/AllProjectsSection'
 import { FeaturedProjectsSection } from './components/sections/FeaturedProjectsSection'
 import { Introduction } from './components/sections/Introduction'
 import { SkillsSection } from './components/sections/SkillsSection'
+import { EducationSection } from './components/sections/EducationSection'
 import { LiveDemoSection } from './components/sections/LiveDemoSection'
 import { TodoSection } from './components/sections/TodoSection'
 import { person, projects, featuredProjects, skills, liveDemo } from './data/portfolio'
@@ -39,6 +40,8 @@ function App() {
         />
 
         <AllProjectsSection projects={allProjects} />
+
+        <EducationSection />
 
         <TodoSection />
       </div>
