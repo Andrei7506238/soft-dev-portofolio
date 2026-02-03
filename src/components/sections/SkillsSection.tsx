@@ -41,7 +41,7 @@ export function SkillsSection({ skills }: Props) {
   }
 
   return (
-    <section className="section skills" aria-labelledby="skills-title">
+    <section className="section skills" id="skills" aria-labelledby="skills-title">
       <div className="section-header">
         <h2 id="skills-title">Technical Skills</h2>
         <p className="section-subtitle">Technologies I work with, grouped by familiarity. Hover over a skill for more info.</p>

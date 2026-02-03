@@ -4,12 +4,11 @@ import { AllProjectsSection } from './components/sections/AllProjectsSection'
 import { FeaturedProjectsSection } from './components/sections/FeaturedProjectsSection'
 import { Introduction } from './components/sections/Introduction'
 import { SkillsSection } from './components/sections/SkillsSection'
-import { person, projects, skills } from './data/portfolio'
+import { person, projects, featuredProjects, skills } from './data/portfolio'
 import Layout from './components/layout/Layout'
 
 function App() {
-  const featuredProjects = projects.filter((p) => p.featured)
-  const allProjects = projects.filter((p) => !p.featured)
+  const allProjects = projects
 
   return (
     <Layout>

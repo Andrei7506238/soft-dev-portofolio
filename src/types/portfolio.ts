@@ -19,5 +19,13 @@ export type Project = {
   tags: string[]
   image: string
   links: ProjectLink[]
-  featured?: boolean
+  date: string
+}
+
+export type FeaturedProject = {
+  name: string
+  description: string
+  tags: string[]
+  image: string
+  links: ProjectLink[]
 }

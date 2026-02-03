@@ -1,3 +1,4 @@
+import type { FeaturedProject } from '../types/portfolio'
 import type { Project, Skill } from '../types/portfolio'
 
 const assetBase = import.meta.env.BASE_URL
@@ -148,7 +149,7 @@ export const skills: Skill[] = [
     }
 ]
 
-export const projects: Project[] = [
+export const featuredProjects: FeaturedProject[] = [
     {
         name: 'Plugin Restaurant Ordering System',
         description:
@@ -161,22 +162,77 @@ On the client side, the Flutter application provides a responsive, cross-platfor
         image: `${assetBase}images/showcase/plugin-restaurant-ordering-system.png`,
         links: [
             { label: 'See Case Study', href: '#' },
+            { label: 'See Demo', href: 'https://www.youtube.com/watch?v=WKDwvteNCFw' }
         ],
-        featured: true,
     },
     {
         name: 'Fazan Game Cheat',
         description:
-        `
-This Flutter application modernizes a legacy C++ engine by reimagining the Romanian dictionary as a directed multigraph. In this model, nodes represent two-letter prefixes and suffixes, while edges represent the words connecting them. By implementing the game logic through graph traversal, the app identifies "dead-end" nodes—vertexes with an out-degree of zero—allowing users to strategically select words that leave opponents with no valid moves.
+            `
+This Flutter application modernizes an older C++ project by reimagining the Romanian dictionary as a directed multigraph. In this model, nodes represent two-letter prefixes and suffixes, while edges represent the words connecting them. By implementing the game logic through graph traversal, the app identifies "dead-end" nodes—vertexes with an out-degree of zero—allowing users to strategically select words that leave opponents with no valid moves.
 
 Beyond the algorithmic core, the project focuses on high-performance string processing and efficient memory management within the mobile environment. The transition from a C++ backend to a cross-platform Flutter UI ensures that complex graph lookups happen in real-time, providing a seamless experience for users. Currently available on the Google Play Store, the app demonstrates the practical application of discrete mathematics in solving competitive linguistic challenges.
         `,
         tags: ['Flutter', 'Dart', 'C++'],
         image: `${assetBase}images/showcase/fazan-cheat.png`,
         links: [
-            { label: 'Check on Google Play', href: 'https://play.google.com/store/apps/details?id=com.andreirobert.fazancheat' },
+            { label: 'Check on Google Play', href: 'https://play.google.com/store/apps/details?id=com.andrei7506238.fazan_cheat' },
+            { label: 'See C++ Project', href: 'https://github.com/Andrei7506238/Fazan' },
         ],
-        featured: true,
+    }
+]
+
+// Non-featured projects live here. Add regular projects to this array.
+export const projects: Project[] = [
+    {
+        name: 'Portfolio Website',
+        description: 'The source code of this portfolio website, built with React and TypeScript. It showcases my projects, skills, and experience as a software developer. The website is designed to be responsive and accessible, providing a great user experience across all devices. It features sections for featured projects, all projects, skills, and contact information.',
+        tags: ['React', 'TypeScript', 'HTML | CSS'],
+        image: `https://media.licdn.com/dms/image/v2/D4D03AQETN0kD6jT2bg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1695401890460?e=1771459200&v=beta&t=YuPZNxiAxalSvFnwaeIbE_PQlCvzd9TonluX36yG12o`,
+        links: [
+            { label: 'Check On GitHub', href: 'https://github.com/Andrei7506238/soft-dev-portofolio' },
+        ],
+        date: 'Jan 2026'
+    },
+    {
+        name: 'Fish Aquarium OpenGL Demo',
+        description: 'A simple OpenGL demo simulating a fish aquarium with animated fish and underwater effects. Built using C++ and OpenGL, it demonstrates basic graphics programming techniques. Showcases 3D rendering, texture mapping, and simple fish animation, together with billboard bubbles and skybox. It also allows for custom 3D model loading in the aquarium scene.',
+        tags: ['C++', 'OpenGL', 'University'],
+        image: `${assetBase}images/showcase/fish-aquarium-opengl-demo.png`,
+        links: [
+            { label: 'Check On GitHub', href: 'https://github.com/AndreiRobertP/fish-tank-opengl' },
+        ],
+        date: 'Jan 2023'
+    },
+    {
+        name: 'SubInc - Automatic Subtitle Downloader and Softcoder',
+        description: 'A Python-based headless script that automates adding subtitles to locally downloaded movies and TV shows, with support for recursive batch processing. Uses MKVToolNix and the OpenSubtitles API to automatically fetch and embed the best matching subtitles for each media file. Provides easy to use installer and context menu integration for Windows.',
+        tags: ['Python', 'MKVToolNix', 'API'],
+        image: `${assetBase}images/showcase/subtitles_incorporated.png`,
+        links: [
+            { label: 'Check On GitHub', href: 'https://github.com/Andrei7506238/SubInc' },
+        ],
+        date: 'Sept 2022'
+    },
+    {
+        name: 'School Management System',
+        description: 'A desktop platform built with C# and WPF. Utilizing Clean Architecture and MVVM, the project ensures a strict separation of concerns between its core business logic and the UI. The data layer is orchestrated via Entity Framework Core using the Repository pattern, showcasing a modular, testable, and highly maintainable approach to the .NET ecosystem.',
+        tags: ['C# | WPF', 'Clean Architecture', 'University'],
+        image: `${assetBase}images/showcase/school-management.png`,
+        links: [
+            { label: 'Check On GitHub', href: 'https://github.com/AndreiRobertP/SchoolManagement/tree/master' },
+        ],
+        date: 'May 2023'
+    },
+    {
+        name: 'Task Nest',
+        description: 'A C# and WPF productivity tool focused on managing TODO list workflows through recursive data structures and visitor & composite design patterns. Unlike flat to-do lists, Task Nest implements a hierarchical tree architecture, allowing for infinite task nesting and granular sub-task tracking.',
+        tags: ['C# | .WPF', 'Design Patterns', 'University'],
+        image: `${assetBase}images/showcase/task-nest.png`,
+        links: [
+            { label: 'Check On GitHub', href: 'https://github.com/AndreiRobertP/TaskNest' },
+        ],
+        date: 'Apr 2023'
+
     }
 ]

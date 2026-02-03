@@ -1,8 +1,8 @@
-import type { Project } from '../../types/portfolio'
-import { ProjectCard } from '../ui/ProjectCard'
+import type { FeaturedProject } from '../../types/portfolio'
+import { FeaturedProjectCard } from '../ui/FeaturedProjectCard'
 
 type Props = {
-  projects: Project[]
+  projects: FeaturedProject[]
 }
 
 export function FeaturedProjectsSection({ projects }: Props) {
@@ -19,7 +19,7 @@ export function FeaturedProjectsSection({ projects }: Props) {
 
       <div className="featured-grid">
         {projects.map((project) => (
-          <ProjectCard key={project.name} project={project} variant="featured" />
+          <FeaturedProjectCard key={project.name} project={project} />
         ))}
       </div>
     </section>
