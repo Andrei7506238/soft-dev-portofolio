@@ -52,6 +52,7 @@ export function SkillsSection({ skills }: Props) {
           <SkillGroup key={group.level} group={group} />
         ))}
       </div>
+      <div className="section-divider" />
     </section>
   )
 }

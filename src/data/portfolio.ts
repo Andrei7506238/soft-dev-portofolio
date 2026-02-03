@@ -215,6 +215,14 @@ export const projects: Project[] = [
         date: 'Sept 2022'
     },
     {
+        name: 'Library Management System',
+        description: 'A Java and Spring Boot web application for managing CRUD operations on books, including book inventory, and loan tracking. It features a user-friendly interface. We managed to deploy the application on AWS using EC2, S3 for static assets, RDS for the database, CloudWatch for logging, and SES for email notifications.',
+        tags: ['Java | Spring Boot', 'AWS', 'University'],
+        image: `${assetBase}images/showcase/library-management-system.png`,
+        links: [],
+        date: 'Jun 2025'
+    },
+    {
         name: 'School Management System',
         description: 'A desktop platform built with C# and WPF. Utilizing Clean Architecture and MVVM, the project ensures a strict separation of concerns between its core business logic and the UI. The data layer is orchestrated via Entity Framework Core using the Repository pattern, showcasing a modular, testable, and highly maintainable approach to the .NET ecosystem.',
         tags: ['C# | WPF', 'Clean Architecture', 'University'],
@@ -236,3 +244,10 @@ export const projects: Project[] = [
 
     }
 ]
+
+export const liveDemo = {
+    title: 'Step-by-Step Kangaroo | Interactive Educational Game',
+    description: 'This project breathes new life into a beloved piece of Moldovan educational history. By modernizing the classic Cangurul Executant, I developed an immersive Flutter-based environment where the next generation of coders can master algorithmic thinking. Through an interactive kangaroo character, students bridge the gap between abstract logic and visual execution. This isn not just a game, it is a cross-platform educational tool designed to make complex computational concepts feel like second nature.',
+    demoUrl: 'https://cangurulpascupas.vercel.app/',
+    tags: ['Flutter', 'Dart', 'Formal Language and Interpreters', 'Educational Game'],
+}
