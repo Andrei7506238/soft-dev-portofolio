@@ -1,4 +1,5 @@
 import { ButtonLink } from '../ui/ButtonLink'
+import './Introduction.css'
 
 type Props = {
   name: string
@@ -57,8 +58,13 @@ export function Introduction({
           </ButtonLink>
         </div>
       </div>
-      <div className="intro-photo">
-        <img src={photoSrc} alt={photoAlt} />
+      <div className="intro-photo blob-frame">
+        <div className="blob-wrap" aria-hidden="true">
+          <span className="blob-layer"></span>
+          <span className="blob-layer blob-layer-secondary"></span>
+          <span className="blob-layer blob-layer-ring"></span>
+        </div>
+        <img className="intro-photo-img" src={photoSrc} alt={photoAlt} />
       </div>
     </header>
   )
