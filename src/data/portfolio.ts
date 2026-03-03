@@ -188,7 +188,7 @@ export const projects: Project[] = [
         name: 'Portfolio Website',
         description: 'The source code of this portfolio website, built with React and TypeScript. It showcases my projects, skills, and experience as a software developer. The website is designed to be responsive and accessible, providing a great user experience across all devices. It features sections for featured projects, all projects, skills, and contact information.',
         tags: ['React', 'TypeScript', 'HTML | CSS'],
-        image: `https://media.licdn.com/dms/image/v2/D4D03AQETN0kD6jT2bg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1695401890460?e=1771459200&v=beta&t=YuPZNxiAxalSvFnwaeIbE_PQlCvzd9TonluX36yG12o`,
+        image: `${assetBase}images/showcase/portfolio-website.png`,
         links: [
             { label: 'Check On GitHub', href: 'https://github.com/Andrei7506238/soft-dev-portofolio' },
         ],
