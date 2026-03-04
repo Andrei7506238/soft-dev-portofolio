@@ -161,7 +161,7 @@ On the client side, the Flutter application provides a responsive, cross-platfor
         tags: ['ASP.NET Core', 'Flutter', 'Clean Architecture'],
         image: `${assetBase}images/showcase/plugin-restaurant-ordering-system.png`,
         links: [
-            { label: 'See Case Study', href: '#' },
+            { label: 'See Case Study', href: './restaurant-ordering-system' },
             { label: 'See Demo', href: 'https://www.youtube.com/watch?v=WKDwvteNCFw' }
         ],
     },

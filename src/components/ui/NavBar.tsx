@@ -11,19 +11,22 @@ type Props = {
 }
 
 export function NavBar({ name, linkedinUrl, theme, nextTheme, onToggleTheme }: Props) {
+  const basePath = import.meta.env.BASE_URL || '/'
+
   return (
     <nav className="navbar">
       <div className="navbar-inner">
         <div className="brand">
-          <a href="#" className="brand-link">
+          <a href={basePath} className="brand-link">
             <strong>{name}</strong>
           </a>
         </div>
 
         <div className="nav-actions">
-          <a className="nav-link" href="#skills">Skills</a>
-          <a className="nav-link" href="#projects-featured">Featured</a>
-          <a className="nav-link" href="#all-projects">Projects</a>
+          <a className="nav-link" href={`${basePath}#skills`}>Skills</a>
+          <a className="nav-link" href={`${basePath}#projects-featured`}>Featured</a>
+          <a className="nav-link" href={`${basePath}#all-projects`}>Projects</a>
+          <a className="nav-link" href={`${basePath}restaurant-ordering-system`}>Restaurant OS</a>
           <ButtonLink href={linkedinUrl} variant="ghost" target="_blank" rel="noreferrer">LinkedIn</ButtonLink>
           <ThemeToggle theme={theme} nextTheme={nextTheme} onToggle={onToggleTheme} />
         </div>
