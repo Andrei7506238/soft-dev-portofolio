@@ -26,7 +26,6 @@ export function NavBar({ name, linkedinUrl, theme, nextTheme, onToggleTheme }: P
           <a className="nav-link" href={`${basePath}#skills`}>Skills</a>
           <a className="nav-link" href={`${basePath}#projects-featured`}>Featured</a>
           <a className="nav-link" href={`${basePath}#all-projects`}>Projects</a>
-          <a className="nav-link" href={`${basePath}restaurant-ordering-system`}>Restaurant OS</a>
           <ButtonLink href={linkedinUrl} variant="ghost" target="_blank" rel="noreferrer">LinkedIn</ButtonLink>
           <ThemeToggle theme={theme} nextTheme={nextTheme} onToggle={onToggleTheme} />
         </div>
