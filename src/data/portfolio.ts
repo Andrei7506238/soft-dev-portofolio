@@ -14,7 +14,7 @@ I am a Mobile Developer focused on building high-performance, well-structured Fl
 I enjoy breaking down complex systems into modular, testable components, and I see architecture as the key to long-term maintainability. While my strength is in core logic, I approach UI with a strong sense of structure and clarity.\n
 For me, great mobile apps are built with both solid architecture and user experience in mind, as two complementary aspects.
   `,
-    photoSrc: `${assetBase}images/showcase/profile.png`,
+    photoSrc: `${assetBase}images/showcase/profile.jpeg`,
     photoAlt: 'My profile photo',
     links: {
         linkedin: 'https://www.linkedin.com/in/andrei-robert-popa',

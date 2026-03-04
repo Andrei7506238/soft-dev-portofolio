@@ -59,12 +59,14 @@ export function Introduction({
         </div>
       </div>
       <div className="intro-photo blob-frame">
-        <div className="blob-wrap" aria-hidden="true">
-          <span className="blob-layer"></span>
-          <span className="blob-layer blob-layer-secondary"></span>
-          <span className="blob-layer blob-layer-ring"></span>
+        <div className="glass-card" aria-hidden="true">
+          <span className="glass-orb glass-orb-top"></span>
+          <span className="glass-orb glass-orb-bottom"></span>
         </div>
-        <img className="intro-photo-img" src={photoSrc} alt={photoAlt} />
+        <div className="glass-card-inner">
+          <span className="glass-shine" aria-hidden="true"></span>
+          <img className="intro-photo-img" src={photoSrc} alt={photoAlt} />
+        </div>
       </div>
     </header>
   )
