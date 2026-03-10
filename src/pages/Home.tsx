@@ -5,6 +5,7 @@ import { SkillsSection } from '../components/sections/SkillsSection'
 import { EducationSection } from '../components/sections/EducationSection'
 import { LiveDemoSection } from '../components/sections/LiveDemoSection'
 import { TodoSection } from '../components/sections/TodoSection'
+import { BlogSection } from '../components/sections/BlogSection'
 import { person, projects, featuredProjects, skills, liveDemo } from '../data/portfolio'
 import '../App.css'
 
@@ -41,6 +42,8 @@ export function HomePage() {
       <EducationSection />
 
       <TodoSection />
+
+      <BlogSection />
     </div>
   )
 }

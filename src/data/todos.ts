@@ -7,15 +7,9 @@ export type Todo = {
 
 export const todos: Todo[] = [
     {
-        title: 'Publish a short blog post on this portfolio and add case studies',
-        description: 'Improve content and add detailed case studies about projects and make the portfolio show more about my work and personality.',
-        status: 'in-progress',
-        eta: 'Feb 2026',
-    },
-    {
         title: 'Finish my Master\'s thesis and publish the project',
         description: 'Complete the research and development of my Master\'s thesis project and make the app publicly available. The project consists of a Flutter multi-platform application designed for learning.',
-        status: 'todo',
+        status: 'in-progress',
         eta: 'Jun 2026',
     },
     {
