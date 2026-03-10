@@ -50,10 +50,7 @@ export function Introduction({
 
         <p className="lead" style={{ whiteSpace: 'pre-line' }}>{headline}</p>
         <div className="cta-row">
-          <ButtonLink href="#projects-featured" variant="primary">
-            View Featured Work
-          </ButtonLink>
-          <ButtonLink href={linkedinUrl} variant="ghost" target="_blank" rel="noreferrer">
+          <ButtonLink href={linkedinUrl} variant="primary">
             LinkedIn
           </ButtonLink>
         </div>
