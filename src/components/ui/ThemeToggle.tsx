@@ -1,4 +1,5 @@
 import type { Theme } from '../../hooks/useTheme'
+import './ThemeToggle.css'
 
 type Props = {
   theme: Theme

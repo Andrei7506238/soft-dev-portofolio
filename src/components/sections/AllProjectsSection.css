@@ -1,0 +1,33 @@
+.projects-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+@media (min-width: 769px) {
+  .projects-grid:has(.project-card:nth-child(1):nth-last-child(1)),
+  .projects-grid:has(.project-card:nth-child(2):nth-last-child(1)) {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.empty-projects {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: var(--muted);
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border);
+}
+
+.empty-projects p {
+  margin: 0;
+  font-size: 1rem;
+}

@@ -41,6 +41,28 @@
   color: var(--surface-muted);
 }
 
+.role {
+  color: var(--muted);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.company-row {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.company-link {
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.company-link:hover {
+  text-decoration: underline;
+}
+
 .lead {
   margin: 0;
   font-size: 1rem;

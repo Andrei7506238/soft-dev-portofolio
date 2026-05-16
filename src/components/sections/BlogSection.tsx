@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import './BlogSection.css'
 
 type BlogPost = {
   id: string
@@ -325,7 +326,6 @@ export function BlogSection() {
                     <h3 className="blog-featured-title">{featuredPost.title}</h3>
                     <p className="blog-featured-excerpt">{featuredPost.excerpt}</p>
                     <div className="blog-featured-footer">
-                      <span className="blog-topic-pill">{formatCategoryLabel(featuredPost.category)}</span>
                       <span className="blog-read-link">Read article</span>
                     </div>
                   </div>

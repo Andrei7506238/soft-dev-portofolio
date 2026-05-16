@@ -1,5 +1,6 @@
 import type { FeaturedProject } from '../../types/portfolio'
 import { Tag } from './Tag'
+import './FeaturedProjectCard.css'
 
 type Props = {
   project: FeaturedProject

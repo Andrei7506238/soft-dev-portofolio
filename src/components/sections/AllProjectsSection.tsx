@@ -1,5 +1,6 @@
 import type { Project } from '../../types/portfolio'
 import { ProjectCard } from '../ui/ProjectCard'
+import './AllProjectsSection.css'
 
 type Props = {
   projects: Project[]

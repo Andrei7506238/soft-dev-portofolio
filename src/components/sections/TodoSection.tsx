@@ -1,4 +1,5 @@
 import { todos } from '../../data/todos'
+import './TodoSection.css'
 
 export function TodoSection() {
   return (

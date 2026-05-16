@@ -1,4 +1,5 @@
 import type { AnchorHTMLAttributes, ReactNode } from 'react'
+import './ButtonLink.css'
 
 type Variant = 'primary' | 'ghost'
 

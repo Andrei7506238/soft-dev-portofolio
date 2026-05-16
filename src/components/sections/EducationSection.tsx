@@ -1,5 +1,6 @@
 import type { Education as EducationType } from '../../data/education'
 import { education } from '../../data/education'
+import './EducationSection.css'
 
 export function EducationSection() {
   return (

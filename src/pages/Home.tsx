@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import { AllProjectsSection } from '../components/sections/AllProjectsSection'
 import { FeaturedProjectsSection } from '../components/sections/FeaturedProjectsSection'
 import { Introduction } from '../components/sections/Introduction'
@@ -6,10 +8,27 @@ import { EducationSection } from '../components/sections/EducationSection'
 import { TodoSection } from '../components/sections/TodoSection'
 import { BlogSection } from '../components/sections/BlogSection'
 import { person, projects, featuredProjects, skills } from '../data/portfolio'
-import '../App.css'
 
 export function HomePage() {
   const allProjects = projects
+  const { sectionId } = useParams<{ sectionId?: string }>()
+
+  useEffect(() => {
+    if (!sectionId) {
+      return
+    }
+
+    const targetId = decodeURIComponent(sectionId)
+
+    requestAnimationFrame(() => {
+      const target = document.getElementById(targetId)
+      if (!target) {
+        return
+      }
+
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    })
+  }, [sectionId])
 
   return (
     <div className="page">

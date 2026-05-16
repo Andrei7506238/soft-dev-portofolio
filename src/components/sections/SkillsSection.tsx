@@ -1,4 +1,5 @@
 import type { Skill, SkillLevel } from '../../types/portfolio'
+import './SkillsSection.css'
 
 type Props = {
   skills: Skill[]

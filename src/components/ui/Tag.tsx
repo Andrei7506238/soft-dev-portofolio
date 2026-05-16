@@ -1,3 +1,5 @@
+import './Tag.css'
+
 type Props = {
   label: string
 }
