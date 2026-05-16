@@ -10,9 +10,11 @@ export const person = {
     company: 'Magic Lane',
     companyUrl: 'https://magiclane.com/',
     headline: `
-I am a Mobile Developer focused on building high-performance, well-structured Flutter applications. My work centers on software architecture, Dart FFI, and C++ bindings, creating stable foundations.\n
-I enjoy breaking down complex systems into modular, testable components, and I see architecture as the key to long-term maintainability. While my strength is in core logic, I approach UI with a strong sense of structure and clarity.\n
-For me, great mobile apps are built with both solid architecture and user experience in mind, as two complementary aspects.
+I am a Mobile Developer focused on building high-performance, well-structured cross-platform applications. My work at Magic Lane spans the entire development lifecycle, where I play a central role in maintaining a major consumer-facing application alongside the continuous development of our core SDK.
+
+My expertise centers on software architecture, Dart FFI, and native C++ bindings, creating stable, scalable foundations that seamlessly bridge complex, low-level logic with modern mobile experiences.
+
+I enjoy breaking down complex systems into modular, testable components, treating clean architecture as the absolute key to long-term maintainability. While my primary strength lies in backend mobile logic and SDK integration, I approach UI development with a strict sense of structure, clarity, and fluid user experience.
   `,
     photoSrc: `${assetBase}images/showcase/profile.jpeg`,
     photoAlt: 'My profile photo',
@@ -44,7 +46,13 @@ export const skills: Skill[] = [
         name: 'C++',
         level: 'most',
         logoUrl: `https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg`,
-        hoverDescription: 'I used C and C++ for FFI Dart bindings. Also, I used C++ for most university projects.',
+        hoverDescription: 'I use C++ for FFI Dart bindings and for most university projects.',
+    },
+    {
+        name: 'FFI (Foreign Function Interface)',
+        level: 'most',
+        logoUrl: `https://upload.wikimedia.org/wikipedia/commons/4/4b/Gear_icon-72a7cf.svg`,
+        hoverDescription: 'I use FFI in my everyday work to bridge Dart with native C++ code. Also for my master\'s thesis project.',
     },
     {
         name: 'C# | ASP.NET',
@@ -83,7 +91,7 @@ export const skills: Skill[] = [
         hoverDescription: 'Scripting and basic tooling with Bash. I used it mainly for automating development tasks that involve simple multiple command-line tools.',
     },
     {
-        name: 'JavaScript | TypeScript',
+        name: 'JavaScript | TS',
         level: 'basic',
         logoUrl: `https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg`,
         hoverDescription: 'I used JavaScript for web development projects, both personal and academic.',
@@ -101,16 +109,10 @@ export const skills: Skill[] = [
         hoverDescription: 'I have experience with SQL databases from multiple university projects.',
     },
     {
-        name: 'Photoshop',
+        name: 'Design Tools (PS, AI, Canva)',
         level: 'basic',
         logoUrl: `https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg`,
-        hoverDescription: 'I used Photoshop extensively in high school for commissions, creating digital and print designs such as posters and flyers.',
-    },
-    {
-        name: 'Illustrator',
-        level: 'basic',
-        logoUrl: `https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg`,
-        hoverDescription: 'I used Illustrator extensively in high school for commissions, creating digital and print designs such as posters and flyers.',
+        hoverDescription: 'I used Photoshop and Illustrator extensively in high school for commissions, creating digital and print designs such as posters and flyers.',
     },
     {
         name: 'Software Architecture',
@@ -169,7 +171,7 @@ On the client side, the Flutter application provides a responsive, cross-platfor
         name: 'Fazan Game Cheat',
         description:
             `
-This Flutter application modernizes an older C++ project by reimagining the Romanian dictionary as a directed multigraph. In this model, nodes represent two-letter prefixes and suffixes, while edges represent the words connecting them. By implementing the game logic through graph traversal, the app identifies "dead-end" nodes—vertexes with an out-degree of zero—allowing users to strategically select words that leave opponents with no valid moves.
+This Flutter application modernizes an older C++ project by reimagining the Romanian dictionary as a directed multigraph. In this model, nodes represent two-letter prefixes and suffixes, while edges represent the words connecting them. By implementing the game logic through graph traversal, the app identifies "dead-end" nodes (vertexes with an out-degree of zero) allowing users to strategically select words that leave opponents with no valid moves.
 
 Beyond the algorithmic core, the project focuses on high-performance string processing and efficient memory management within the mobile environment. The transition from a C++ backend to a cross-platform Flutter UI ensures that complex graph lookups happen in real-time, providing a seamless experience for users. Currently available on the Google Play Store, the app demonstrates the practical application of discrete mathematics in solving competitive linguistic challenges.
         `,
@@ -178,6 +180,22 @@ Beyond the algorithmic core, the project focuses on high-performance string proc
         links: [
             { label: 'Check on Google Play', href: 'https://play.google.com/store/apps/details?id=com.andrei7506238.fazan_cheat' },
             { label: 'See C++ Project', href: 'https://github.com/Andrei7506238/Fazan' },
+        ],
+    },
+    {
+        name: 'Step-by-Step Kangaroo | Interactive Educational Game',
+        description:
+            `
+This project breathes new life into a legacy educational application. By modernizing the classic Cangurul Executant, I developed an immersive Flutter-based environment where the next generation of coders can master algorithmic thinking.
+
+Through an interactive kangaroo character, students bridge the gap between abstract logic and visual execution. This is not just a game, it is a cross-platform educational tool designed to make complex computational concepts feel like second nature.
+
+The original application was bult decades ago and is still used in schools and textbooks, and I hope that the new version will make it more accessible and engaging for students, while preserving the core educational value of the original.
+            `,
+        tags: ['Flutter', 'Dart', 'Formal Language and Interpreters', 'Educational Game'],
+        image: `${assetBase}images/showcase/cangurul-pas-cu-pas.png`,
+        links: [
+            { label: 'Open Demo', href: 'https://cangurulpascupas.vercel.app/' },
         ],
     }
 ]
@@ -245,9 +263,4 @@ export const projects: Project[] = [
     }
 ]
 
-export const liveDemo = {
-    title: 'Step-by-Step Kangaroo | Interactive Educational Game',
-    description: 'This project breathes new life into a beloved piece of Moldovan educational history. By modernizing the classic Cangurul Executant, I developed an immersive Flutter-based environment where the next generation of coders can master algorithmic thinking. Through an interactive kangaroo character, students bridge the gap between abstract logic and visual execution. This isn not just a game, it is a cross-platform educational tool designed to make complex computational concepts feel like second nature.',
-    demoUrl: 'https://cangurulpascupas.vercel.app/',
-    tags: ['Flutter', 'Dart', 'Formal Language and Interpreters', 'Educational Game'],
-}
+// liveDemo removed — converted into a featured project

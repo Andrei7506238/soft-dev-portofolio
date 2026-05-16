@@ -294,7 +294,7 @@ export function RestaurantOrderingSystemPage() {
                         <div className="ros-card__text">
                             <p>
                                 The server scans a plugin directory, loads DLLs via Assembly, and instantiates classes implementing an <em>IInjector</em>
-                                interface. Plugins receive the IServiceCollection, registering their own services—mappers, persisters, controllers,
+                                interface. Plugins receive the IServiceCollection, registering their own services: mappers, persisters, controllers,
                                 event observers, and more.
                             </p>
                             <p>

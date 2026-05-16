@@ -10,15 +10,15 @@ export function TodoSection() {
 
       <ul className="todo-list">
         {todos.map((t) => (
-          <li id={t.title} className="todo-item">
+          <li key={t.title} id={t.title} className="todo-item">
+            <div className="todo-meta">
+              <span className={`todo-status ${t.status}`}>{t.status === 'in-progress' ? 'In progress' : t.status === 'done' ? 'Done' : 'Planned'}</span>
+              {t.eta && <span className="todo-eta">{t.eta}</span>}
+            </div>
+
             <div className="todo-main">
               <strong className="todo-title">{t.title}</strong>
               {t.description && <p className="todo-desc">{t.description}</p>}
-            </div>
-
-            <div className="todo-meta">
-              {t.eta && <span className="todo-eta">{t.eta}</span>}
-              <span className={`todo-status ${t.status}`}>{t.status === 'in-progress' ? 'In progress' : t.status === 'done' ? 'Done' : 'Planned'}</span>
             </div>
           </li>
         ))}

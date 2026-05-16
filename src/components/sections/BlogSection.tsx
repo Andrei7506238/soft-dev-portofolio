@@ -5,11 +5,102 @@ type BlogPost = {
   title: string
   link: string
   category: string
+  excerpt: string
+  published: string
+  image?: string
 }
 
 const FEED_URL = 'https://andrei7506238.github.io/blog/feed.xml'
-const MAX_POSTS = 8
+const MAX_VISIBLE_COMPACT_POSTS = 2
 const CACHE_KEY = 'blog-feed-cache-v1'
+const ALL_POSTS = 'all'
+
+function stripHtml(htmlText: string): string {
+  const plainText = new DOMParser().parseFromString(htmlText, 'text/html').body.textContent ?? ''
+
+  return plainText.replace(/\s+/g, ' ').trim()
+}
+
+function pickSummary(entry: Element): string {
+  const summary = entry.getElementsByTagName('summary')[0]?.textContent?.trim() ?? ''
+  const content = entry.getElementsByTagName('content')[0]?.textContent?.trim() ?? ''
+  const source = summary || content
+
+  if (!source) {
+    return 'Open the full article for the complete write-up.'
+  }
+
+  const cleaned = stripHtml(source)
+
+  return cleaned.length > 190 ? `${cleaned.slice(0, 187).trimEnd()}...` : cleaned
+}
+
+function pickPublishedDate(entry: Element): string {
+  return (
+    entry.getElementsByTagName('published')[0]?.textContent?.trim() ??
+    entry.getElementsByTagName('updated')[0]?.textContent?.trim() ??
+    ''
+  )
+}
+
+function pickImage(entry: Element): string | undefined {
+  const mediaNode = Array.from(entry.children).find(
+    (child) =>
+      child.namespaceURI === 'http://search.yahoo.com/mrss/' &&
+      (child.localName === 'thumbnail' || child.localName === 'content'),
+  )
+
+  const mediaUrl = mediaNode?.getAttribute('url')?.trim()
+  if (mediaUrl) {
+    return mediaUrl
+  }
+
+  const htmlSource =
+    entry.getElementsByTagName('summary')[0]?.textContent?.trim() ??
+    entry.getElementsByTagName('content')[0]?.textContent?.trim() ??
+    ''
+
+  if (!htmlSource) {
+    return undefined
+  }
+
+  return new DOMParser().parseFromString(htmlSource, 'text/html').querySelector('img')?.getAttribute('src') ?? undefined
+}
+
+function formatCategoryLabel(category: string): string {
+  return category
+    .split(/[-\s]+/)
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ')
+}
+
+function formatPublishedDate(value: string): string {
+  if (!value) {
+    return ''
+  }
+
+  const parsed = new Date(value)
+  if (Number.isNaN(parsed.getTime())) {
+    return ''
+  }
+
+  return new Intl.DateTimeFormat('en', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  }).format(parsed)
+}
+
+function buildMediaStyle(post: BlogPost): React.CSSProperties | undefined {
+  if (!post.image) {
+    return undefined
+  }
+
+  return {
+    backgroundImage: `linear-gradient(180deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0.72)), url(${post.image})`,
+  }
+}
 
 function pickAtomLink(entry: Element): string {
   const linkNodes = Array.from(entry.getElementsByTagName('link'))
@@ -40,14 +131,13 @@ function pickCategory(entry: Element): string {
 function parseFeed(xmlText: string): BlogPost[] {
   const xml = new DOMParser().parseFromString(xmlText, 'application/xml')
   const entries = Array.from(xml.querySelectorAll('entry'))
-  const nodes = entries
 
-  return nodes
-    .slice(0, MAX_POSTS)
+  return entries
     .map((node, index) => {
       const title = node.getElementsByTagName('title')[0]?.textContent?.trim() ?? ''
       const link = pickAtomLink(node)
       const category = pickCategory(node)
+      const image = pickImage(node)
 
       if (!title || !link) {
         return null
@@ -58,6 +148,9 @@ function parseFeed(xmlText: string): BlogPost[] {
         title,
         link,
         category,
+        excerpt: pickSummary(node),
+        published: pickPublishedDate(node),
+        ...(image ? { image } : {}),
       }
     })
     .filter((post): post is BlogPost => post !== null)
@@ -75,7 +168,20 @@ function readCachedPosts(): BlogPost[] {
       return []
     }
 
-    return parsed.filter((post) => post.title && post.link).slice(0, MAX_POSTS)
+    return parsed
+      .filter((post) => post && typeof post.title === 'string' && typeof post.link === 'string')
+      .map((post) => ({
+        id: typeof post.id === 'string' ? post.id : `${post.link}-${post.title}`,
+        title: post.title,
+        link: post.link,
+        category: typeof post.category === 'string' && post.category ? post.category : 'uncategorized',
+        excerpt:
+          typeof post.excerpt === 'string' && post.excerpt
+            ? post.excerpt
+            : 'Open the full article for the complete write-up.',
+        published: typeof post.published === 'string' ? post.published : '',
+        image: typeof post.image === 'string' && post.image ? post.image : undefined,
+      }))
   } catch {
     return []
   }
@@ -83,7 +189,7 @@ function readCachedPosts(): BlogPost[] {
 
 function writeCachedPosts(posts: BlogPost[]) {
   try {
-    localStorage.setItem(CACHE_KEY, JSON.stringify(posts.slice(0, MAX_POSTS)))
+    localStorage.setItem(CACHE_KEY, JSON.stringify(posts))
   } catch {
     // Ignore quota/storage errors.
   }
@@ -92,6 +198,7 @@ function writeCachedPosts(posts: BlogPost[]) {
 export function BlogSection() {
   const [posts, setPosts] = useState<BlogPost[]>([])
   const [loading, setLoading] = useState(true)
+  const [activeCategory, setActiveCategory] = useState(ALL_POSTS)
 
   useEffect(() => {
     const controller = new AbortController()
@@ -148,11 +255,35 @@ export function BlogSection() {
     }
   }, [])
 
+  const categories = [
+    ALL_POSTS,
+    ...Array.from(new Set(posts.map((post) => post.category.toLowerCase()))),
+  ]
+
+  const selectedCategory = categories.includes(activeCategory) ? activeCategory : ALL_POSTS
+  const visiblePosts =
+    selectedCategory === ALL_POSTS
+      ? posts
+      : posts.filter((post) => post.category.toLowerCase() === selectedCategory)
+
+  const featuredPost = visiblePosts[0]
+  const compactPosts = visiblePosts.slice(1, MAX_VISIBLE_COMPACT_POSTS + 1)
+
   return (
     <section className="section blog-section" id="blog" aria-labelledby="blog-title">
-      <div className="section-header">
-        <h2 id="blog-title">Blog</h2>
-        <p className="section-subtitle">Latest posts.</p>
+      <div className="section-header blog-section-header">
+        <div>
+          <h2 id="blog-title">Technical blog</h2>
+          <p className="section-subtitle">Latest essays, engineering notes, and longer-form thinking.</p>
+        </div>
+        <a
+          className="blog-archive-link"
+          href="https://andrei7506238.github.io/blog/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View archive
+        </a>
       </div>
 
       {loading ? (
@@ -160,21 +291,69 @@ export function BlogSection() {
       ) : posts.length === 0 ? (
         <p className="blog-feed-state">No posts found right now.</p>
       ) : (
-        <div className="blog-row" role="list" aria-label="Latest blog posts">
-          {posts.map((post) => (
-            <a
-              className="blog-card"
-              key={post.id}
-              href={post.link}
-              target="_blank"
-              rel="noreferrer"
-              role="listitem"
-            >
-              <h3 className="blog-title">{post.title}</h3>
-              <p className="blog-category">{post.category}</p>
-            </a>
-          ))}
-        </div>
+        <>
+          <div className="blog-filters" role="tablist" aria-label="Blog categories">
+            {categories.map((category) => {
+              const isActive = category === selectedCategory
+
+              return (
+                <button
+                  key={category}
+                  type="button"
+                  className={`blog-filter-chip${isActive ? ' is-active' : ''}`}
+                  onClick={() => setActiveCategory(category)}
+                  role="tab"
+                  aria-selected={isActive}
+                >
+                  {category === ALL_POSTS ? 'All posts' : formatCategoryLabel(category)}
+                </button>
+              )
+            })}
+          </div>
+
+          {featuredPost ? (
+            <>
+              <div className="blog-layout">
+                <a
+                  className="blog-featured-card"
+                  href={featuredPost.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="blog-featured-media" style={buildMediaStyle(featuredPost)} aria-hidden="true" />
+                  <div className="blog-featured-overlay">
+                    <h3 className="blog-featured-title">{featuredPost.title}</h3>
+                    <p className="blog-featured-excerpt">{featuredPost.excerpt}</p>
+                    <div className="blog-featured-footer">
+                      <span className="blog-topic-pill">{formatCategoryLabel(featuredPost.category)}</span>
+                      <span className="blog-read-link">Read article</span>
+                    </div>
+                  </div>
+                </a>
+
+                <div className="blog-side-rail">
+                  {compactPosts.map((post) => (
+                    <a
+                      className="blog-compact-card"
+                      key={post.id}
+                      href={post.link}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <div className="blog-compact-body">
+                        <p className="blog-category">{formatCategoryLabel(post.category)}</p>
+                        <h3 className="blog-title">{post.title}</h3>
+                        <p className="blog-compact-date">{formatPublishedDate(post.published)}</p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </>
+          ) : (
+            <p className="blog-feed-state">No posts found for this category.</p>
+          )}
+        </>
       )}
     </section>
   )
