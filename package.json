@@ -3,14 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://andrei7506238.github.io/soft-dev-portofolio",
+  "homepage": "https://andrei7506238.github.io",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "deploy:profile": "gh-pages -d dist -r https://github.com/andrei7506238/andrei7506238.github.io.git -b main"
   },
   "dependencies": {
     "react": "^19.2.0",
