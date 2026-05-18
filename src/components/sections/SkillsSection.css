@@ -1,34 +1,8 @@
 .section.skills {
   gap: 1rem;
-  position: relative;
-  isolation: isolate;
 }
 
-.section.skills::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  max-width: none;
-  z-index: -1;
-  pointer-events: none;
-  background-color: rgba(2, 6, 23, 0.08);
-  background-image:
-    radial-gradient(700px 340px at 10% 0%, rgba(96, 165, 250, 0.06), transparent 62%),
-    linear-gradient(180deg, rgba(15, 23, 42, 0.02), rgba(2, 6, 23, 0.01));
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
 
-:root[data-theme='light'] .section.skills::before {
-  background-color: rgba(241, 245, 249, 0.6);
-  background-image:
-    radial-gradient(700px 340px at 10% 0%, rgba(37, 99, 235, 0.04), transparent 62%),
-    linear-gradient(180deg, rgba(241, 245, 249, 1), rgba(226, 232, 240, 0.4));
-}
 
 .skills-groups {
   display: grid;
