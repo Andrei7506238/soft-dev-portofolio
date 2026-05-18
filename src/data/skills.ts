@@ -11,13 +11,13 @@ export const skills: Skill[] = [
     name: 'Dart',
     level: 'most',
     logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/9/91/Dart-logo-icon.svg',
-    hoverDescription: 'Dart is my primary programming language for mobile development, and I have a deep understanding of its features and best practices.',
+    hoverDescription: 'Dart is my primary language for mobile development. I know it well enough to navigate its quirks and have used it across multiple production and personal projects.',
   },
   {
     name: 'BLoC / Cubit',
     level: 'most',
     logoUrl: 'https://www.svgrepo.com/show/374235/bloc.svg',
-    hoverDescription: 'I mainly use BLoC/Cubit for state management in my Flutter projects, appreciating its clear separation of concerns and testability.',
+    hoverDescription: 'My go-to for state management in Flutter. I like that it keeps UI and business logic apart and that stream-based state is straightforward to test.',
   },
   {
     name: 'C++',
@@ -35,7 +35,7 @@ export const skills: Skill[] = [
     name: 'C# | ASP.NET',
     level: 'most',
     logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg',
-    hoverDescription: "C# is my preferred language for backend development, and I have used it in my Bachelor's degree with ASP.NET.",
+    hoverDescription: "C# is my preferred language for backend development and I have used it in my Bachelor's degree with ASP.NET.",
   },
   {
     name: 'Kotlin',
@@ -94,22 +94,22 @@ export const skills: Skill[] = [
   {
     name: 'Software Architecture',
     level: 'practices',
-    hoverDescription: 'I follow established software architecture patterns to ensure my applications are modular, scalable, and maintainable over time.',
+    hoverDescription: 'I design applications around layered and modular structures so they stay manageable as they grow.',
   },
   {
     name: 'Testing',
     level: 'practices',
-    hoverDescription: 'I prioritize writing unit and integration tests to ensure code reliability and facilitate future changes and created custom tooling to support this process.',
+    hoverDescription: 'I write unit and integration tests as part of normal development, not as an afterthought. I also built custom tooling to make the test setup less painful in a few projects.',
   },
   {
     name: 'Clean Architecture',
     level: 'practices',
-    hoverDescription: 'I apply Clean Architecture principles to separate concerns and create a clear structure in my applications.',
+    hoverDescription: 'I use Clean Architecture to draw clear lines between layers, which makes individual modules easier to swap or test without touching everything else.',
   },
   {
     name: 'Design Patterns',
     level: 'practices',
-    hoverDescription: 'I utilize common design patterns to solve recurring problems in software design effectively.',
+    hoverDescription: 'I use common design patterns where they fit. They save time when you have already solved the same structural problem before.',
   },
   {
     name: 'RESTful APIs',
@@ -124,6 +124,6 @@ export const skills: Skill[] = [
   {
     name: 'i18n, l10n and Accessibility',
     level: 'practices',
-    hoverDescription: 'I ensure my applications are accessible to a diverse audience by implementing internationalization, localization, and accessibility best practices.',
+    hoverDescription: 'I handle i18n, l10n and accessibility in my apps so they work for users in different regions and with different needs.',
   },
 ]

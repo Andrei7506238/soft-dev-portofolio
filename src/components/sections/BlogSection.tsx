@@ -275,7 +275,7 @@ export function BlogSection() {
       <div className="section-header blog-section-header">
         <div>
           <h2 id="blog-title">Technical blog</h2>
-          <p className="section-subtitle">Latest essays, engineering notes, and longer-form thinking.</p>
+          <p className="section-subtitle">Latest essays, engineering notes and longer-form thinking.</p>
         </div>
         <a
           className="blog-archive-link"

@@ -25,7 +25,7 @@ const skillGroups: SkillGroupDefinition[] = [
     {
     level: 'practices',
     title: 'Engineering practices and methodologies',
-    description: 'Development practices and methodologies I follow to ensure code quality and maintainability.',
+    description: 'Development practices I apply across all my projects.',
   },
 ]
 

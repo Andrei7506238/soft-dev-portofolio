@@ -18,13 +18,13 @@ const featureCards = [
     {
         title: 'Cross-platform client',
         description:
-            'Flutter client ships to Android, iOS, and web for a consistent guest and staff experience everywhere.',
+            'Flutter client ships to Android, iOS and web for a consistent guest and staff experience everywhere.',
         icon: 'https://cdn-icons-png.freepik.com/512/9872/9872430.png',
     },
     {
         title: 'Menu and order management',
         description:
-            'Versioned menus, multi-section products, and live order editing keep staff productive during service.',
+            'Versioned menus, multi-section products and live order editing keep staff productive during service.',
         icon: 'https://cdn-icons-png.freepik.com/512/6868/6868908.png',
     },
 ]
@@ -50,9 +50,9 @@ const architectureSections = [
     {
         title: 'ASP.NET Core server',
         paragraphs: [
-            'Controllers, services, and repositories are clearly separated and wired through interfaces.',
-            'Domain hosts contracts for repositories, services, entities, events, and transactions. Plugins depend only on these interfaces.',
-            'Implementation covers persistence, controllers, authentication, real-time comms, and notifications.',
+            'Controllers, services and repositories are clearly separated and wired through interfaces.',
+            'Domain hosts contracts for repositories, services, entities, events and transactions. Plugins depend only on these interfaces.',
+            'Implementation covers persistence, controllers, authentication, real-time comms and notifications.',
             'TestImplementation keeps unit coverage focused. Main hosts plugin loading and startup.',
         ],
         image: 'rosPackageDiagram.png',
@@ -61,9 +61,9 @@ const architectureSections = [
     {
         title: 'Flutter client',
         paragraphs: [
-            'Domain defines entities, repositories, and messaging contracts in pure Dart.',
+            'Domain defines entities, repositories and messaging contracts in pure Dart.',
             'Implementation contains generated OpenAPI clients plus concrete repos and services.',
-            'UI hosts all Flutter widgets, dependency injection framework glue, and blocks that connect UI to logic.',
+            'UI hosts all Flutter widgets, dependency injection framework glue and blocks that connect UI to logic.',
             'Server-driven UI components - simply implement the required interfaces in plugins and the UI will adapt.',
             'Clean architecture with clear boundaries keeps the client adaptable and maintainable as features evolve.',
             'State management driven by Cubit/BLoC pattern for predictable, testable UI behavior.',
@@ -108,7 +108,7 @@ const entities = [
     {
         title: 'Menu primitives',
         description:
-            'Sections, products, attribute groups, and attributes mirror delivery-app schemas for smooth integrations.',
+            'Sections, products, attribute groups and attributes mirror delivery-app schemas for smooth integrations.',
     },
     {
         title: 'Dining topology',
@@ -137,7 +137,7 @@ export function RestaurantOrderingSystemPage() {
                     <h1 className="ros-title">Modular ordering for busy restaurants</h1>
                     <p className="ros-lead">
                         A plugin-ready platform with a Flutter client and ASP.NET Core backend. Built to keep menus flexible,
-                        orders reliable, and integrations open.
+                        orders reliable and integrations open.
                     </p>
                     <div className="ros-cta-row">
                         <ButtonLink href="https://youtu.be/WKDwvteNCFw" target="_blank" rel="noreferrer">
@@ -176,7 +176,7 @@ export function RestaurantOrderingSystemPage() {
                         <div className="ros-video__text">
                             <h2>See the flow in action</h2>
                             <p>
-                                Orders, menu edits, and plugin-driven options remain responsive with offline-friendly caching and real-time updates.
+                                Orders, menu edits and plugin-driven options remain responsive with offline-friendly caching and real-time updates.
                             </p>
                         </div>
                     </div>
@@ -187,7 +187,7 @@ export function RestaurantOrderingSystemPage() {
                 <div className="ros-section__header">
                     <p className="ros-eyebrow">Highlights</p>
                     <h2>Built for flexibility</h2>
-                    <p className="ros-section__lead">Runtime plugins, multi-platform delivery, and operational tooling keep the system adaptable.</p>
+                    <p className="ros-section__lead">Runtime plugins, multi-platform delivery and operational tooling keep the system adaptable.</p>
                 </div>
                 <div className="ros-feature-grid">
                     {featureCards.map((feature) => (
@@ -204,7 +204,7 @@ export function RestaurantOrderingSystemPage() {
                 <div className="ros-section__header">
                     <p className="ros-eyebrow">Operational strength</p>
                     <h2>Resilient during rush hours</h2>
-                    <p className="ros-section__lead">Caching, self-hosting, and guardrails keep service smooth when the restaurant is busiest.</p>
+                    <p className="ros-section__lead">Caching, self-hosting and guardrails keep service smooth when the restaurant is busiest.</p>
                 </div>
                 <div className="ros-strengths">
                     {strengths.map((item) => (
@@ -293,9 +293,9 @@ export function RestaurantOrderingSystemPage() {
                     <div className="ros-card__body ros-card__body--stack">
                         <div className="ros-card__text">
                             <p>
-                                The server scans a plugin directory, loads DLLs via Assembly, and instantiates classes implementing an <em>IInjector</em>
+                                The server scans a plugin directory, loads DLLs via Assembly and instantiates classes implementing an <em>IInjector</em>
                                 interface. Plugins receive the IServiceCollection, registering their own services: mappers, persisters, controllers,
-                                event observers, and more.
+                                event observers and more.
                             </p>
                             <p>
                                 Client-side, modules expose options rendered in the UI; triggering an option calls the server to execute the linked
@@ -314,7 +314,7 @@ export function RestaurantOrderingSystemPage() {
                 <div className="ros-section__header">
                     <p className="ros-eyebrow">Entities</p>
                     <h2>Modeled for restaurant realities</h2>
-                    <p className="ros-section__lead">Menu, rooms, and orders match how teams operate while staying integration-friendly.</p>
+                    <p className="ros-section__lead">Menu, rooms and orders match how teams operate while staying integration-friendly.</p>
                 </div>
                 <div className="ros-entities">
                     <div className="ros-entities__text">

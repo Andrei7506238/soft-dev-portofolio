@@ -4,7 +4,7 @@ import { assetBase } from './base'
 export const projects: Project[] = [
   {
     name: 'Portfolio Website',
-    description: 'The source code of this portfolio website, built with React and TypeScript. It showcases my projects, skills, and experience as a software developer. The website is designed to be responsive and accessible, providing a great user experience across all devices. It features sections for featured projects, all projects, skills, and contact information.',
+    description: 'The source code of this portfolio website, built with React and TypeScript. It has sections for featured projects, a full project list, skills and a case study page. Built responsive and accessible, no external component libraries used.',
     tags: ['React', 'TypeScript', 'HTML | CSS'],
     image: `${assetBase}images/showcase/portfolio-website.png`,
     links: [{ label: 'Check On GitHub', href: 'https://github.com/Andrei7506238/soft-dev-portofolio' }],
@@ -12,7 +12,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Fish Aquarium OpenGL Demo',
-    description: 'A simple OpenGL demo simulating a fish aquarium with animated fish and underwater effects. Built using C++ and OpenGL, it demonstrates basic graphics programming techniques. Showcases 3D rendering, texture mapping, and simple fish animation, together with billboard bubbles and skybox. It also allows for custom 3D model loading in the aquarium scene.',
+    description: 'A simple OpenGL demo simulating a fish aquarium with animated fish and underwater effects. Built using C++ and OpenGL, it demonstrates basic graphics programming techniques. Showcases 3D rendering, texture mapping and simple fish animation, together with billboard bubbles and skybox. It also allows for custom 3D model loading in the aquarium scene.',
     tags: ['C++', 'OpenGL', 'University'],
     image: `${assetBase}images/showcase/fish-aquarium-opengl-demo.png`,
     links: [{ label: 'Check On GitHub', href: 'https://github.com/AndreiRobertP/fish-tank-opengl' }],
@@ -28,7 +28,7 @@ export const projects: Project[] = [
   },
   {
     name: 'Library Management System',
-    description: 'A Java and Spring Boot web application for managing CRUD operations on books, including book inventory, and loan tracking. It features a user-friendly interface. We managed to deploy the application on AWS using EC2, S3 for static assets, RDS for the database, CloudWatch for logging, and SES for email notifications.',
+    description: 'A Java and Spring Boot web application for book inventory and loan tracking. Deployed on AWS with EC2, S3 for static assets, RDS for the database, CloudWatch for logging and SES for email notifications.',
     tags: ['Java | Spring Boot', 'AWS', 'University'],
     image: `${assetBase}images/showcase/library-management-system.png`,
     links: [],
@@ -36,7 +36,7 @@ export const projects: Project[] = [
   },
   {
     name: 'School Management System',
-    description: 'A desktop platform built with C# and WPF. Utilizing Clean Architecture and MVVM, the project ensures a strict separation of concerns between its core business logic and the UI. The data layer is orchestrated via Entity Framework Core using the Repository pattern, showcasing a modular, testable, and highly maintainable approach to the .NET ecosystem.',
+    description: 'A desktop platform built with C# and WPF. Uses Clean Architecture and MVVM to keep business logic and the UI layer separate. The data layer uses Entity Framework Core with the Repository pattern, which makes the individual modules easy to test independently.',
     tags: ['C# | WPF', 'Clean Architecture', 'University'],
     image: `${assetBase}images/showcase/school-management.png`,
     links: [
